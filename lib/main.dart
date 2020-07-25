@@ -23,7 +23,7 @@ class WeatherTimes extends StatelessWidget {
         },
         home: WelcomeScreen(),
       ),
-      overlayColor: Colors.black87,
+      overlayColor: Colors.black54,
       overlayOpacity: 1.0,
       overlayWidget: Center(
         child: CircularProgressIndicator(
