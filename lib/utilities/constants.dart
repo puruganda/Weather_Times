@@ -21,6 +21,10 @@ const kWeatherTextStyle = TextStyle(
   fontWeight: FontWeight.w300,
 );
 
+const kWeatherIconTextStyle = TextStyle(
+  fontSize: 100.0,
+);
+
 const kWeatherDescriptionTextStyle = TextStyle(
   fontSize: 28.0,
 );

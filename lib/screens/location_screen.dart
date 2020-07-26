@@ -112,9 +112,17 @@ class _LocationScreenState extends State<LocationScreen> {
                         SizedBox(
                           height: 5.0,
                         ),
-                        Text(
-                          '$temperature°$weatherIcon',
-                          style: kWeatherTextStyle,
+                        Row(
+                          children: <Widget>[
+                            Text(
+                              '$temperature°',
+                              style: kWeatherTextStyle,
+                            ),
+                            Text(
+                              weatherIcon,
+                              style: kWeatherIconTextStyle,
+                            ),
+                          ],
                         ),
                         Text(
                           weatherDescription,
