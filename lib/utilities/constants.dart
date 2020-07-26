@@ -1,8 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-const kApiKey = '4f7d5cb318830eda0115307e18c1c15e';
-
 const kOpenWeatherMapApi = 'https://api.openweathermap.org/data/2.5/weather';
 
 const kWeatherTimesTextStyle = TextStyle(

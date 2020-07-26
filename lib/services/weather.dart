@@ -1,6 +1,7 @@
 import 'package:weather_times/services/location.dart';
 import 'package:weather_times/services/networking.dart';
 import 'package:weather_times/utilities/constants.dart';
+import 'package:weather_times/privateKeys.dart';
 import 'package:flutter/cupertino.dart';
 
 class WeatherModel {
@@ -11,14 +12,14 @@ class WeatherModel {
     }
     PositionData positionData = PositionData(
         apiUrl:
-            '$kOpenWeatherMapApi?lat=${location.latitude}&lon=${location.longitude}&appid=$kApiKey&units=metric');
+            '$kOpenWeatherMapApi?lat=${location.latitude}&lon=${location.longitude}&appid=$apiKey&units=metric');
     var weatherData = await positionData.getPositionWeather();
     return weatherData;
   }
 
   Future<dynamic> getCityWeather(String city) async {
     PositionData positionData = PositionData(
-        apiUrl: '$kOpenWeatherMapApi?q=$city&appid=$kApiKey&units=metric');
+        apiUrl: '$kOpenWeatherMapApi?q=$city&appid=$apiKey&units=metric');
     var weatherData = await positionData.getPositionWeather();
     return weatherData;
   }
