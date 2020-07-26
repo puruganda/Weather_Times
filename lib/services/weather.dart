@@ -4,6 +4,9 @@ import 'package:weather_times/utilities/constants.dart';
 import 'package:weather_times/privateKeys.dart';
 import 'package:flutter/cupertino.dart';
 
+// Note: To run this project please provide your own apiKey as the apiKey provided is private and cannot be accessed.
+// - refer https://openweathermap.org/ to get an apiKey
+
 class WeatherModel {
   Future<dynamic> getLocationWeather(BuildContext context) async {
     var location = await Position().getPosition(context);
@@ -13,6 +16,7 @@ class WeatherModel {
     PositionData positionData = PositionData(
         apiUrl:
             '$kOpenWeatherMapApi?lat=${location.latitude}&lon=${location.longitude}&appid=$apiKey&units=metric');
+    //provide apiKey
     var weatherData = await positionData.getPositionWeather();
     return weatherData;
   }
@@ -20,6 +24,7 @@ class WeatherModel {
   Future<dynamic> getCityWeather(String city) async {
     PositionData positionData = PositionData(
         apiUrl: '$kOpenWeatherMapApi?q=$city&appid=$apiKey&units=metric');
+    //provide apiKey
     var weatherData = await positionData.getPositionWeather();
     return weatherData;
   }
